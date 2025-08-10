@@ -77,6 +77,14 @@ function M.apply(config)
             mods = "LEADER",
             action = wezterm.action.ActivateCopyMode,
         },
+
+
+        -- Launcher
+        {
+            key = "t",
+            mods = "LEADER",
+            action = wezterm.action.ShowLauncher
+        }
     }
 end
 
