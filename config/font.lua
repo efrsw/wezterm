@@ -8,7 +8,7 @@ function M.apply(config)
         config.font_size = 14
     else
         config.font = wezterm.font "JetBrainsMono Nerd Font"
-        config.font_size = 22
+        config.font_size = 18
     end
 end
 

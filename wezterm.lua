@@ -10,6 +10,8 @@ local keys = require("config.keys")
 local launch_menu = require("config.launch_menu")
 local general = require("config.general")
 
+wezterm.log_info('Loaded config')
+
 -- Apply font configuration
 font.apply(config)
 
