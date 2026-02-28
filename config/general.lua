@@ -13,6 +13,11 @@ function M.apply(config)
     config.tab_bar_at_bottom = true
     config.hide_tab_bar_if_only_one_tab = true
     config.audible_bell = "Disabled"
+
+    config.inactive_pane_hsb = {
+        saturation = 0.8,
+        brightness = 0.55,
+    }
 end
 
 return M
