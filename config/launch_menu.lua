@@ -5,7 +5,7 @@ local M = {}
 function M.apply(config)
     local launch_menu = {}
     
-    if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+    if wezterm.target_triple:find("windows") then
         table.insert(launch_menu, {
             label = 'Devshell VS2022',
             args = {
