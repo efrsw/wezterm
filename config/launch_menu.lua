@@ -4,19 +4,23 @@ local M = {}
 
 function M.apply(config)
     local launch_menu = {}
-    
-    if wezterm.target_triple:find("windows") then
+
+    if wezterm.target_triple:find("windows") or wezterm.target_triple:find("pc") then
+        table.insert(launch_menu, {
+            label = 'PowerShell',
+            args = { 'pwsh', '-NoLogo' },
+        })
         table.insert(launch_menu, {
             label = 'Devshell VS2022',
             args = {
                 'pwsh',
                 '-noe',
                 '-c',
-                '& "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\Launch-VsDevShell.ps1"'
+                '& "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\Tools\\Launch-VsDevShell.ps1"'
             }
         })
     end
-    
+
     config.launch_menu = launch_menu
 end
 
