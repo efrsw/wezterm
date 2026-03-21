@@ -4,12 +4,7 @@ local M = {}
 
 function M.apply(config)
     if wezterm.target_triple:find("windows") then
-        local pwsh = wezterm.which("pwsh")
-        if pwsh then
-            config.default_prog = { pwsh }
-        else
-            config.default_prog = { "powershell" }
-        end
+        config.default_prog = { "pwsh.exe", "-NoLogo" }
     end
 
     config.max_fps = 240
